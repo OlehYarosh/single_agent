@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Single Agent</title>
+    <link rel="stylesheet" href="/styles/style.css">
+    <link rel="stylesheet" href="/styles/map.css">
+</head>
+<body>
+    <main>
+        <div class="properties">
+            <label for="startX">Start 
+                <span class="red-label tooltip" title="Точка червоного кольору, рахувати по горизонталі">X</span>:
+            </label>
+            <input type="number" id="startX"><br>
+            <label for="startY">Start 
+                <span class="red-label tooltip" title="Точка червоного кольору, рахувати по вертикалі">Y</span>:
+            </label>
+            <input type="number" id="startY"><br>
+            <label for="goalX">Goal 
+                <span class="green-label tooltip" title="Точка зеленого кольору, рахувати по горизонталі">X</span>:
+            </label>
+            <input type="number" id="goalX"><br>
+            <label for="goalY">Goal 
+                <span class="green-label tooltip" title="Точка зеленого кольору, рахувати по вертикалі">Y</span>:
+            </label>
+            <input type="number" id="goalY"><br>
+    
+            <label for="numRectangles">Number of obstacles:<span class="tooltip" title="Трошки тексту зеленого"></span></label>
+            <input type="number" id="numRectangles"><br>
+            <label for="minSize">Minimum obstacle size:<span class="tooltip" title="Трошки тексту зеленого"></span></label>
+            <input type="number" id="minSize"><br>
+            <label for="maxSize">Maximum obstacle size:<span class="tooltip" title="Трошки тексту зеленого"></span></label>
+            <input type="number" id="maxSize" ><br>
+            
+            <div class="buttons-container">
+                <button onclick="logInputs()">Log Inputs</button>
+                <button onclick="resetInputs()">Reset</button>
+                <button onclick="exampleInputs()">Example</button>
+            </div>
+        </div>
+
+        <div id="map-container">
+            <div id="map"></div>
+            <div id="coordinate-system">
+                <div class="axis-y">
+                    <div class="axis-label-y">500</div>
+                    <div class="axis-label-y">400</div>
+                    <div class="axis-label-y">300</div>
+                    <div class="axis-label-y">200</div>
+                    <div class="axis-label-y">100</div>
+                    <div class="axis-label-y">0</div>
+                </div>
+                <div class="axis-x">
+                    <div class="axis-label-x">0</div>
+                    <div class="axis-label-x">100</div>
+                    <div class="axis-label-x">200</div>
+                    <div class="axis-label-x">300</div>
+                    <div class="axis-label-x">400</div>
+                    <div class="axis-label-x">500</div>
+                </div>
+            </div>
+
+        </div>
+    </main>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/7.0.0/d3.min.js"></script>
+    <script src="/scripts/single_agent.js"></script>
+    <script src="/scripts/main.js"></script>
+</body>
+</html>
